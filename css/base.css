@@ -71,11 +71,18 @@ h1 strong {
   transition: all 0.25s ease-in-out 0s;
 }
 .asterix {
+  left: 0;
   font-style: italic;
   position: absolute;
   bottom: 0;
   color: white;
   margin: 0 0 20px 20px;
+}
+.share {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 20px 20px; 
 }
 /*
 @media only screen and (min-width : 992px) and (max-width : 1999px) {
