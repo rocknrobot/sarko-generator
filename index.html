@@ -1,0 +1,72 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr"> <!--<![endif]-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Générateur de phrases de Nicolas Sarkozy</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="js/modernizr.js"></script>
+</head>
+<body>
+  <div class="bg-sarkozy"></div>
+  <div class="overlay"></div>
+  <section class="vertical">
+    <div class="container">
+      <div class="col-md-8 col-md-offset-2 quote">
+        <span class="icon-quote">&rdquo;</span>
+        <h1 id="quote"></h1>
+      </div>
+      <div class="col-md-12 text-center">
+        <button type="submit" class="btn btn-default again">Encore une autre ?</button>
+      </div>
+    </div>
+  </section>
+  <p class="asterix text-center">* à moins de démontrer qu'on est un professeur qui fait des recherches</p>
+  <script type="text/javascript">
+    var FunctionQuote = function() {
+    var Quote = [
+      "Pour Sarkozy, \"quand on consulte des images <strong>d'Obama</strong>, on est <strong>Obama</strong>\"*",  
+      "Pour Sarkozy, \"quand on consulte des images <strong>de chats</strong>, on est <strong>des chats</strong>\"*",
+      "Pour Sarkozy, \"quand on consulte des images <strong>de nourriture</strong>, on est <strong>des quiches</strong>\"*",
+      "Pour Sarkozy, \"quand on consulte des images <strong>de l'ane trotro</strong>, on est <strong>l'ane trotro</strong>\"*",
+      "Pour Sarkozy, \"quand on consulte des images <strong>de tintin</strong>, on est <strong>tintin</strong>\"*",
+      "Pour Sarkozy, \"quand on consulte des images <strong>de djihadistes</strong>, on est <strong>djihadiste</strong>\"*",
+      "Pour Sarkozy, \"quand on consulte des images <strong>de Christian Estrosi en maillot de bain</strong>, on est <strong>Christian Estrosi en maillot de bain</strong>\"*",
+      "Pour Sarkozy, \" quand on consulte des images <strong>de panda roux</strong>, on est <strong>un panda roux</strong>\"*",
+      "Pour Sarkozy, \" quand on consulte des images <strong>de Sarko</strong>, on est <strong>sarkoziste</strong>\"*",
+      "Pour Sarkozy, \" quand on consulte des images <strong>de minions</strong>, on est <strong>trop meugnon</strong>\"*",
+      "Pour Sarkozy, \" quand on consulte des images <strong>de yacht</strong>, on est <strong>Bolloré</strong>\"*",
+      "Pour Sarkozy, \" quand on consulte des images <strong>de nourriture</strong>, on est <strong>une quiche</strong>\"*",
+      "Pour Sarkozy, \" quand on consulte des images <strong>de Valbuena</strong>, on est <strong>Benzema</strong>\"*",
+      "Pour Sarkozy, \" quand on consulte des images <strong>de Zaia</strong>, on est <strong>Ribery</strong>\"*",
+      "Pour Sarkozy, \" quand on consulte des images <strong>de Copé dans sa piscine</strong>, on est <strong>la piscine de Copé</strong>\"*",
+      "Pour Sarkozy, \"quand on consulte des images <strong>de licornes</strong>, on est <strong>une licorne</strong>\"*",
+      "Pour Sarkozy, \"quand on consulte des images <strong>de minions</strong>, on est <strong>une minion</strong>\"*",
+    ];
+  var api = {
+      ButtonAction: function() {
+          $('.again').click(api.generateRandomQuote);
+      }
+      , generateRandomQuote: function() {
+          var randomOffset = Math.floor(Math.random() * 20) % Quote.length;
+          $('#quote').html( Quote[randomOffset] );
+      }
+    };
+    return api;
+  }();
+  $(document).ready(function() {
+      FunctionQuote.ButtonAction();
+      FunctionQuote.generateRandomQuote();
+  });
+</script>
+</body>
+</html>
